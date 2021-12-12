@@ -6,6 +6,10 @@ import { IUsersRepository } from "../IUsersRepository";
 export class InMemoryUsersRepository implements IUsersRepository {
   private users: User[] = [];
 
+  deleteById(user_id: string): Promise<void> {
+    throw new Error("Method not implemented.");
+  }
+
   async findByEmail(email: string): Promise<User | undefined> {
     return this.users.find(user => user.email === email);
   }
