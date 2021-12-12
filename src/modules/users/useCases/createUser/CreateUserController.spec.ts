@@ -41,6 +41,6 @@ describe("Create User Controller", () => {
     });
 
     expect(response.status).toBe(400);
-    expect(response.body).toBe("User already exists");
+    expect(response.body.message).toBe("User already exists");
   });
 })
