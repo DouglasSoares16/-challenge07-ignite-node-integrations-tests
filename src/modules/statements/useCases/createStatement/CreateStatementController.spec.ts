@@ -45,6 +45,7 @@ describe("Create Statement Controller", () => {
         Authorization: `Bearer ${responseSession.body.token}`
       });
 
+    expect(response.status).toBe(201);
     expect(response.body).toHaveProperty("id");
     expect(response.body.amount).toBe(500);
     expect(response.body.type).toBe("deposit");
@@ -84,6 +85,7 @@ describe("Create Statement Controller", () => {
         Authorization: `Bearer ${responseSession.body.token}`
       });
 
+    expect(response.status).toBe(201);
     expect(response.body).toHaveProperty("id");
     expect(response.body.amount).toBe(300);
     expect(response.body.type).toBe("withdraw");
